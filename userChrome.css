@@ -1,0 +1,47 @@
+/* ===== Esconder a barra de abas de cima ===== */
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+/* ===== Forçar abas verticais na esquerda ===== */
+#sidebar-box {
+  min-width: 45px !important;
+  max-width: 45px !important;
+  order: -1 !important; /* garante que fique na esquerda */
+}
+
+/* Esconde cabeçalho da barra lateral */
+#sidebar-header {
+  display: none !important;
+}
+
+/* Só mostrar ícones (favicons) nas abas */
+.tabbrowser-tab .tab-label-container {
+  display: none !important;
+}
+.tabbrowser-tab {
+  min-width: 45px !important;
+  max-width: 45px !important;
+}
+
+/* Centralizar o ícone da aba */
+.tabbrowser-tab .tab-icon-stack {
+  margin-inline: auto !important;
+}
+
+/* ===== Botão Home visível ===== */
+#home-button {
+  display: -moz-box !important;
+}
+
+/* ===== Esconde os outros botões ===== */
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#library-button,
+#sidebar-button,
+#tabs-newtab-button,
+#alltabs-button {
+  display: none !important;
+}

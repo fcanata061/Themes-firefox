@@ -1,0 +1,52 @@
+/* === Mover a barra de abas para a esquerda === */
+#TabsToolbar {
+  visibility: visible !important;
+  order: -1 !important; /* joga para a esquerda */
+  width: 50px !important; /* largura fixa */
+  min-width: 50px !important;
+  max-width: 50px !important;
+  border-right: 1px solid var(--chrome-content-separator-color);
+}
+
+/* Esconder a barra de abas de cima (só sobrar a lateral) */
+#TabsToolbar[inFullscreen],
+#TabsToolbar[orient="horizontal"] {
+  visibility: collapse !important;
+}
+
+/* Mostrar só o ícone (favicon) da aba */
+.tabbrowser-tab .tab-label-container,
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+.tabbrowser-tab {
+  writing-mode: vertical-lr !important; /* verticaliza */
+  min-height: 45px !important;
+  max-height: 45px !important;
+  justify-content: center !important;
+}
+.tabbrowser-tab .tab-icon-stack {
+  margin: auto !important;
+}
+
+/* Botão Home sempre visível */
+#home-button {
+  display: -moz-box !important;
+}
+
+/* Esconde os outros botões da barra de navegação */
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#library-button,
+#sidebar-button,
+#tabs-newtab-button,
+#alltabs-button {
+  display: none !important;
+}
+
+/* Ajustar barra de navegação para ficar limpa */
+#nav-bar {
+  min-height: 40px !important;
+}

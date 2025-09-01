@@ -1,0 +1,58 @@
+/* === Coluna lateral minimalista de abas === */
+#TabsToolbar {
+  visibility: visible !important;
+  order: -1 !important; /* move p/ esquerda */
+  width: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Esconde a tab bar horizontal (em cima) */
+#TabsToolbar[orient="horizontal"] {
+  visibility: collapse !important;
+}
+
+/* Abas só com ícones (favicons) */
+.tabbrowser-tab .tab-label-container,
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+.tabbrowser-tab {
+  min-height: 42px !important;
+  max-height: 42px !important;
+  justify-content: center !important;
+}
+.tabbrowser-tab .tab-icon-stack {
+  margin: auto !important;
+}
+
+/* === Botão Home fixo no topo === */
+#nav-bar {
+  order: -1 !important; /* joga nav-bar acima */
+  min-height: 48px !important;
+  max-height: 48px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Mostra só o botão Home */
+#home-button {
+  display: -moz-box !important;
+  margin: auto !important;
+}
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#library-button,
+#sidebar-button,
+#tabs-newtab-button,
+#alltabs-button,
+#nav-bar-customization-target > *:not(#home-button) {
+  display: none !important;
+}

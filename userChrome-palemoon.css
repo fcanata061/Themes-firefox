@@ -1,0 +1,64 @@
+/* === Coluna lateral minimalista no Pale Moon === */
+
+/* Mover barra de abas para a esquerda */
+#TabsToolbar {
+  -moz-box-orient: vertical !important; /* força orientação vertical */
+  min-width: 48px !important;
+  max-width: 48px !important;
+  border: none !important;
+  background: transparent !important;
+  padding-top: 52px !important; /* espaço pro botão Home */
+}
+
+/* Esconder barra de abas horizontal de cima */
+#main-window[tabsintitlebar="true"] #TabsToolbar {
+  visibility: visible !important;
+}
+
+/* Abas só com ícones (favicons) */
+.tabbrowser-tab .tab-text,
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+.tabbrowser-tab {
+  min-height: 40px !important;
+  max-height: 40px !important;
+  justify-content: center !important;
+}
+.tabbrowser-tab .tab-icon-image {
+  margin: auto !important;
+}
+
+/* Botão Home fixo no topo */
+#nav-bar {
+  -moz-box-orient: vertical !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  border: none !important;
+  background: transparent !important;
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  height: 52px !important;
+  z-index: 999 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+#home-button {
+  display: -moz-box !important;
+  margin: auto !important;
+}
+
+/* Esconde os outros botões */
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#downloads-button,
+#bookmarks-menu-button,
+#history-menu-button,
+#new-tab-button,
+#alltabs-button {
+  display: none !important;
+}
